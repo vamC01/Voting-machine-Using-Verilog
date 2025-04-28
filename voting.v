@@ -64,7 +64,7 @@ else case(state)
 						if(b_out > a_out && b_out >c_out) win<=2'b01;
 						else win<=2'b10;
 					end
-          if((a_out==b_out && a_out>c_out) || (a_out==c_out && a_out>b_out) || (b_out==c_out && c_out>a_out))begin 
+          if((a_out==b_out && a_out>c_out) || (a_out==c_out && a_out>b_out) || (b_out==c_out && c_out>a_out)|| (a_out==c_out  && b_out==c_out ))begin 
           tie<=1'b1;win<=2'b11; end
           else tie <= 1'b0; end 
     endcase
